@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>
+        MariaKaryna
+    </title>
+</head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        position: relative;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        overflow: hidden;
+        background-image: url(https://storage.googleapis.com/pod_public/750/184295.jpg);
+    }
+
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        text-align: center;
+        color: Thistle;
+        text-shadow: MediumPurple 1px 0 10px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .def {
+        display: none;
+    }
+
+    .fade-in {
+        animation: fadeIn 2s;
+        margin-top: 32px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 100px;
+    }
+
+@keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+
+
+    <script>
+        window.onload = function () {
+            const first = document.getElementById("first");
+            first.addEventListener('animationend', () => {
+                const second = document.getElementById("second");
+
+                second.classList.add("fade-in");
+                second.classList.remove('def')
+            })
+        }
+    </script>
+
+    <div class="center">
+        <div id="first" class="fade-in">
+            <b>CIAO MARIA</b>
+        </div>
+        <div id="second" class="def">
+            <b>guarda che te ho fatto</b>
+        </div>
+
+    </div>
+
+</body>
+</html>
